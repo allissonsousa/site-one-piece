@@ -154,8 +154,7 @@ main {
     line-height: 50px;
 }
 article {
-    padding: 15px;
-    margin-left: 40px;
+    margin: 20px;
 }
 .art-img {
     width: 350px;
@@ -173,9 +172,13 @@ footer {
     align-items: center;
 }
 .foot {
+    display: none;
     padding: 40px;
     background-color: var(--cor05);
     width: 15%
+}
+#pé {
+    display: block;
 }
 @media screen and (min-width: 800px){
     .search {
