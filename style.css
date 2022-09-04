@@ -65,6 +65,9 @@ nav > ul > li {
     padding-right: 40px;
     background-color: var(--cor01);
 }
+nav > ul > li:hover {
+    transform: translateX(20px);
+}
 nav > ul > li > a {
     list-style-type: none;
     color: white;
@@ -78,7 +81,13 @@ nav > ul > li > a {
     text-decoration: none;
     left: 0px;
     z-index: 2;
-    animation: descer 1.3s ease-in-out 1 forwards;
+    animation: descer 1s ease-in-out 1 forwards;
+    transform: translateX(-200px);
+}
+@keyframes descer {
+    to {
+        transform: translateX(0);
+    }
 }
 ul :hover {
     background-color: #23526e;
@@ -231,4 +240,7 @@ footer {
         width: 500px;
         height: 300px;
     }
+        nav>ul>li:hover {
+            transform: none;
+        }
 }
