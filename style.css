@@ -240,7 +240,7 @@ footer {
         width: 500px;
         height: 300px;
     }
-        nav>ul>li:hover {
-            transform: none;
-        }
+    #nav2 > ul > {
+        transform: none;
+    }
 }
