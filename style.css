@@ -23,6 +23,7 @@ header {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin-bottom: 40px;
 }
 header > input {
     width: 200px;
@@ -77,6 +78,7 @@ nav > ul > li > a {
     text-decoration: none;
     left: 0px;
     z-index: 2;
+    animation: descer 1.3s ease-in-out 1 forwards;
 }
 ul :hover {
     background-color: #23526e;
@@ -114,6 +116,10 @@ ul :hover {
     grid-area: img3;
     border-radius: 10px;
     display: none;
+}
+.container > div:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 .container > div {
     position: relative;
