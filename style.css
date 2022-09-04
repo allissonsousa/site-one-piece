@@ -135,7 +135,7 @@ ul :hover {
     background-color: rgba(0, 0, 0, 0.603);
     border-radius:  0px 0px 10px 10px;
     bottom: 0;
-    animation: aparece 1.2s linear 1 forwards;
+    animation: aparece 2s linear 1 forwards;
     left: 0;
     right: 0;
     min-height: 40px;
