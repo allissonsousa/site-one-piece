@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+:root {
+    --cor01: #42A1DB;
+    --cor02: #8F8D0E;
+    --cor03: #DBD92C;
+    --cor04: #8F1516;
+    --cor05: #DB1617;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body html {
+    width: 100vw;
+    height: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+header {
+    background-color: var(--cor01);
+    height: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header > input {
+    width: 250px;
+    padding: 9px;
+    border-radius: 10px;
+}
+header > h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+
+}
+header > h1:hover {
+    cursor: pointer;
+}
+#simb {
+    color: white;
+    padding: 6px;
+}
+#simb:hover {
+    cursor: pointer;
+    animation: rodar 0.5s ease-out 1 forwards;
+}
+@keyframes rodar {
+    to {
+        transform: rotate(180deg);
+        scale: 1.2;
+    }
+}
+nav {
+    position: absolute;
+    left: 0px;
+    top: 70px;
+}
+nav > ul > li {
+    list-style-type: none;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: var(--cor01);
+}
+nav > ul > li > a {
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+}
+#nav {
+    display: none;
+    position: absolute;
+    text-align: justify;
+    top: 49px;
+    text-decoration: none;
+    left: 0px;
+    z-index: 2;
+}
+ul :hover {
+    background-color: #23526e;
+    transition: 0.45s;
+}
+.nave {
+    display: none;
+}
+.search {
+    display: none;
+}
+.first {
+    max-width: 1200px;
+    margin: auto;
+}
+.img1 {
+    background: var(--cor02) url(imagens/one-piece.jpg) left center/cover no-repeat ;
+    height: 420px;
+    margin: 10px;
+    grid-area: img1;
+    border-radius: 10px;
+}
+.img2 {
+    background: var(--cor04) url(imagens/luffy-wano.jpg) left center/cover no-repeat;
+    height: 200px;
+    margin: 10px;
+    grid-area: img2;
+    border-radius: 10px;
+    display: none;
+}
+.img3 {
+    background: var(--cor01) url(imagens/one-piece.webp) left center/cover no-repeat;
+    height: 200px;
+    margin: 10px;
+    grid-area: img3;
+    border-radius: 10px;
+    display: none;
+}
+.container > div {
+    position: relative;
+    animation: fundo 3s ease-in-out 1 forwards;
+}
+@keyframes fundo {
+    to {
+        background-position-x: 40%;
+    }
+}
+.container > div > p {
+    opacity: 0;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    line-height: 1.5em;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0.603);
+    border-radius:  0px 0px 10px 10px;
+    bottom: 0;
+    animation: aparece 1.2s linear 1 forwards;
+    left: 0;
+    right: 0;
+    min-height: 40px;
+}
+@keyframes aparece {
+    to {
+        opacity: 1;
+    }
+}
+main {
+    display: flex;
+    margin: auto;
+    max-width: 900px;
+    text-align: left;
+    margin-top: 50px;
+    font-size: larger;
+    line-height: 50px;
+}
+article {
+    padding: 15px;
+    margin-left: 40px;
+    margin-right: 13px;
+}
+.art-img {
+    width: 350px;
+    display: block;
+    margin: auto;
+}
+aside {
+    display: none;
+}
+footer {
+    background-color: var(--cor04);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.foot {
+    padding: 40px;
+    background-color: var(--cor05);
+    width: 150px;
+}
+@media screen and (min-width: 800px){
+    .search {
+        display: block;
+    }
+    aside {
+        display: block;
+    }
+    .img2 {
+        display: block;
+    }
+    .img3 {
+        display: block;
+    }
+    .container {
+        display: grid;
+        grid-template-areas:
+            "img1 img2"
+            "img1 img3";
+    }
+    .art-img {
+        width: 500px;
+        height: 300px;
+    }
+}
+@media screen and (min-width: 1050px) {
+    #simb {
+        display: none;
+    }
+    header {
+        height: 150px;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+    .principal {
+        display: none;
+    }
+    .nave {
+        display: flex;
+        margin-top: 50px;
+    }
+    .art-img {
+        width: 500px;
+        height: 300px;
+    }
+}
