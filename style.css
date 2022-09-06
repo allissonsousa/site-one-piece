@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 :root {
+    --cor0:#2882b9;
     --cor01: #42A1DB;
     --cor02: #8F8D0E;
     --cor03: #DBD92C;
@@ -16,85 +17,60 @@ body, html {
     font-family: Arial, Helvetica, sans-serif;
 }
 header {
-    background-color: var(--cor01);
-    height: 120px;
-    text-align: center;
+    background: var(--cor01);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#logo {
+    width: 50px;
+    height: 50px;
+}
+#simbolo-menu {
+    margin: 12px;
+    color: white;
+}
+#simbolo-menu:hover {
+    cursor: pointer;
+}
+nav {
+    background-color: var(--cor0);
+    height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
-    margin-bottom: 40px;
 }
-header > input {
-    width: 200px;
-    padding: 9px;
-    border-radius: 10px;
-}
-header > h1 {
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-
-}
-header > h1:hover {
-    cursor: pointer;
-}
-#simb {
-    color: white;
-    padding: 6px;
-}
-#simb:hover {
-    cursor: pointer;
-    animation: rodar 0.5s ease-out 1 forwards;
-}
-@keyframes rodar {
-    to {
-        transform: rotate(180deg);
-        scale: 1.2;
-    }
-}
-nav {
+nav > ul {
+    background-color: var(--cor0);
+    display: none;
     position: absolute;
+    z-index: 1;
+    list-style: none;
+    top: 150px;
     left: 0px;
-    top: 70px;
+    animation: deslizar 1s ease-in-out 1;
+}
+@keyframes deslizar {
+    from {
+        transform: translateX(-190px);
+    }
 }
 nav > ul > li {
-    list-style-type: none;
-    padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: var(--cor01);
+    padding: 15px 40px;
+    color: white;
 }
 nav > ul > li:hover {
-    transform: translateX(20px);
-}
-nav > ul > li > a {
-    list-style-type: none;
+    background: var(--cor01);
     color: white;
-    text-decoration: none;
+    transition: 0.3s;
 }
-#nav {
-    display: none;
-    position: absolute;
-    text-align: justify;
-    top: 49px;
-    text-decoration: none;
-    left: 0px;
-    z-index: 2;
-    animation: descer 1s ease-in-out 1 forwards;
-    transform: translateX(-200px);
-}
-@keyframes descer {
-    to {
-        transform: translateX(0);
-    }
-}
-ul :hover {
-    background-color: #23526e;
-    transition: 0.45s;
-}
-.nave {
-    display: none;
+nav > input {
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
 }
 .search {
     display: none;
@@ -103,6 +79,7 @@ ul :hover {
     width: 90vw;
     margin: auto;
 }
+
 .img1 {
     background: var(--cor02) url(imagens/one-piece.jpg) left center/cover no-repeat ;
     height: 420px;
@@ -224,17 +201,8 @@ footer {
     #simb {
         display: none;
     }
-    header {
-        height: 150px;
-        align-items: flex-start;
-        padding-top: 30px;
-    }
     .principal {
         display: none;
-    }
-    .nave {
-        display: flex;
-        margin-top: 50px;
     }
     .art-img {
         width: 500px;
