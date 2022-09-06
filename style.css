@@ -72,9 +72,6 @@ nav > input {
     border: none;
     padding-left: 10px;
 }
-.search {
-    display: none;
-}
 .first {
     width: 90vw;
     margin: auto;
@@ -143,7 +140,6 @@ main {
     justify-content: center;
     text-align: left;
     margin-top: 50px;
-    font-size: larger;
     line-height: 50px;
 }
 article {
@@ -172,43 +168,4 @@ footer {
 }
 #pé {
     display: block;
-}
-@media screen and (min-width: 800px){
-    .search {
-        display: block;
-    }
-    aside {
-        display: block;
-    }
-    .img2 {
-        display: block;
-    }
-    .img3 {
-        display: block;
-    }
-    .container {
-        display: grid;
-        grid-template-areas:
-            "img1 img2"
-            "img1 img3";
-    }
-    .art-img {
-        width: 400px;
-        height: 300px;
-    }
-}
-@media screen and (min-width: 1050px) {
-    #simb {
-        display: none;
-    }
-    .principal {
-        display: none;
-    }
-    .art-img {
-        width: 500px;
-        height: 300px;
-    }
-    #nav2 > ul > {
-        transform: none;
-    }
 }
